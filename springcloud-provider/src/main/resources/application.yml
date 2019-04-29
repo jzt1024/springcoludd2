@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: service-user
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jpa?ServerTimeZone=HongKong&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+#配置扫描 mybatis xml 映射路径
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
